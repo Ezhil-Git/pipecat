@@ -79,6 +79,13 @@ class TranslationSubtitles(FrameProcessor):
     # so an application running at the other end of the transport could display
     # subtitles.
     #
+
+    #
+    # This doesn't do anything unless the receiver recognizes the message being
+    # sent. For example, in this case, we are sending a message to the transport
+    # so an application running at the other end of the transport could display
+    # subtitles.
+    #
     async def process_frame(self, frame: Frame, direction: FrameDirection):
         await super().process_frame(frame, direction)
 
